@@ -1,37 +1,48 @@
 {
-    "name" : "YTube BookMarker",
+    "name": "YTube BookMarker",
     "version": "0.1.0",
-    "descriptoin": "Saves the timestamps in YT videos",
-    "permissions" : ["storage", "tabs"],
-    "host_permissions" : ["https://*.youtube.com/*"],
-    "background" : {
+    "description": "Saves the timestamps in YT videos",
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://*.youtube.com/*"
+    ],
+    "background": {
         "service_worker": "background.js"
     },
-    "content_scripts":[
+    "content_scripts": [
         {
-            "matches":["https://*.youtube.com/*"],
-            "js": ["contentScript.js"]
+            "matches": [
+                "https://*.youtube.com/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
         }
     ],
-    "web_accessible_resources":[
+    "web_accessible_resources": [
         {
-            "resources" : [
+            "resources": [
                 "assets/bookmark.png",
                 "assets/play.png",
                 "assets/delete.png",
                 "assets/save.png"
             ],
-            "matches": ["https://*.youtube.com/*"]
+            "matches": [
+                "https://*.youtube.com/*"
+            ]
         }
     ],
     "action": {
-        "default_icon" : {
-            "16" : "assets/ext-icon.png",
-            "24" : "assets/ext-icon.png",
-            "32" : "assets/ext-icon.png"
+        "default_icon": {
+            "16": "assets/ext-icon.png",
+            "24": "assets/ext-icon.png",
+            "32": "assets/ext-icon.png"
         },
-        "default_title" : "YTube BookMarker",
-        "default_popup" : "popup.html"
+        "default_title": "YTube BookMarker",
+        "default_popup": "popup.html"
     },
-    "manifest_vesion": 3
+    "manifest_version": 3
 }

@@ -3,7 +3,8 @@
     color: #314d3e;
 }
 
-.title {
+.title { 
+    /* font */
     font-size: 14px;
     font-weight: bold;
     padding: 8px;
